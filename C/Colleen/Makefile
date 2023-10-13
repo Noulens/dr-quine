@@ -1,17 +1,17 @@
-SRCS1	=	Colleen.c
+SRCS	=	Colleen.c
 
-NAME1	=	Colleen
+NAME	=	Colleen
 
 FLAG	=	-Wall -Wextra -Werror
 
-OBJS1	=	${SRCS1:.c=.o}
+OBJS	=	${SRCS:.c=.o}
 
-all		:	${NAME1}
+all		:	${NAME}
 
 %.o		:	%.c
 			gcc ${FLAG} -c $< -o $@
 
-${NAME1}	:	${OBJS1}
+${NAME}	:	${OBJS}
 			gcc ${FLAG} -g $< -o $@
 
 clean	:
