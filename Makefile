@@ -1,11 +1,11 @@
-all:
+all		:
 	@make -C ./C all
 	@make -C ./ASM all
-fclean:
+fclean	:
 	@make -C ./ASM fclean
 	@make -C ./C fclean
 
-check: all
+check	:	all
 	printf "\nTESTS:\n"
 	@./C/Colleen/Colleen | diff - ./C/Colleen/Colleen.c && printf "Colleen C is right\n"
 	@./ASM/Colleen/Colleen | diff - ./ASM/Colleen/Colleen.s && printf "Colleen ASM is right\n"
