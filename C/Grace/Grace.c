@@ -8,8 +8,3 @@
 	It is not in the stars to hold our destiny but in ourselves.
 */
 B(STR(B(x)))
-int main()
-{
-	int fd = 0101;
-	return 0;
-}
