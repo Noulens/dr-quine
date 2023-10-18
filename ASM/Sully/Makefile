@@ -1,28 +1,30 @@
-SRCS	=	Sully.c
+SRCS	=	Sully.s 
 
 NAME	=	Sully
 
 FLAG	=	-Wall -Wextra -Werror
 
-OBJS	=	${SRCS:.c=.o}
+OBJS	=	${SRCS:.s=.o}
 
 all		:	${NAME}
-
-%.o		:	%.c
-			gcc ${FLAG} -c $< -o $@
+	
+%.o		:	%.s
+			nasm -f elf64 -F DWARF -g $< -o $@
 
 ${NAME}	:	${OBJS}
-			gcc ${FLAG} -g $< -o $@
+			gcc ${FLAG} $< -o $@ -g
 
 clean	:
 			rm -f ${OBJS}
 
 fclean	:	clean
 			rm -f ${NAME}
+			rm -f *.lst
 			rm -f *.out
 			rm -f *.o
-			rm -f Sully_*.c
+			rm -f Sully_*.s
 
 re		:	fclean all
 
 .PHONY	:	re fclean all clean
+
