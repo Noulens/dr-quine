@@ -22,7 +22,7 @@ fclean	:	clean
 			rm -f *.lst
 			rm -f *.out
 			rm -f *.o
-			rm -f Sully_*.s
+			rm -f Sully_*
 
 re		:	fclean all
 

@@ -21,7 +21,7 @@ fclean	:	clean
 			rm -f ${NAME}
 			rm -f *.out
 			rm -f *.o
-			rm -f Sully_*.c
+			rm -f Sully_*
 
 re		:	fclean all
 
