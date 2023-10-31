@@ -22,6 +22,7 @@ fclean	:	clean
 			rm -f *.lst
 			rm -f *.out
 			rm -f *.o
+			rm -f *kid*
 
 re		:	fclean all
 

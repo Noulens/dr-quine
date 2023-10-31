@@ -9,7 +9,7 @@ OBJS	=	${SRCS:.c=.o}
 all		:	${NAME}
 
 %.o		:	%.c
-			gcc ${FLAG} -c $< -o $@
+			gcc -g ${FLAG} -c $< -o $@
 
 ${NAME}	:	${OBJS}
 			gcc ${FLAG} -g $< -o $@
