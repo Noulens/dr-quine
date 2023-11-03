@@ -7,6 +7,7 @@ all		:
 	make -C ./ASM/Sully all
 	make -C ./RUST/Colleen all
 	make -C ./RUST/Grace all
+	make -C ./RUST/Sully all
 
 fclean	:
 	make -C ./C/Colleen fclean
@@ -17,5 +18,6 @@ fclean	:
 	make -C ./ASM/Sully fclean
 	make -C ./RUST/Colleen fclean
 	make -C ./RUST/Grace fclean
+	make -C ./RUST/Sully fclean
 
 re		:	fclean all

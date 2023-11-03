@@ -7,7 +7,7 @@ all		:
 
 clean	:
 			rm -f ${NAME}
-			rm -f Sully_*.rs
+			rm -f Sully_*
 
 fclean	:	clean
 
