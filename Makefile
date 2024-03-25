@@ -5,8 +5,8 @@ all		:
 	make -C ./ASM/Colleen all
 	make -C ./ASM/Grace all
 	make -C ./ASM/Sully all
-#	docker-compose -f ./Docker/docker-compose.yml up --build -d
-#	docker exec -it rust fish
+	docker-compose -f ./Docker/docker-compose.yml up --build -d
+	docker exec -it rust fish
 
 fclean	:
 	make -C ./C/Colleen fclean
@@ -15,7 +15,7 @@ fclean	:
 	make -C ./ASM/Colleen fclean
 	make -C ./ASM/Grace fclean
 	make -C ./ASM/Sully fclean
-#	docker-compose -f ./Docker/docker-compose.yml down
-#	docker system prune -af
+	docker-compose -f ./Docker/docker-compose.yml down
+	docker system prune -af
 
 re		:	fclean all
